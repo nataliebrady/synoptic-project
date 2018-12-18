@@ -1,0 +1,48 @@
+<% provide(:title, @quiz.title) %>
+<div class="row mainpage-container">
+  <div class="col-md-12">
+
+  <h1><%= @quiz.title %></h1>
+
+  <br>
+
+  <div class="panel-group" id="accordion">
+   <div class="panel panel-default">
+     <div class="panel-heading">
+
+  <%= hidden_field_tag :id, @quiz.id %>
+
+  <% @n = (1..100).to_a %>
+
+<% @questions.each_with_index do |question, num| %>
+<h4 class="panel-title">
+  <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%= num %>">
+  <% if question %>
+  <h4><%= @n[num] %>. <%= question.question_title %></h4>
+  <% end %>
+  </a>
+</h4>
+</div>
+
+<div id="collapse<%= num %>" class="panel-collapse collapse in">
+<div class="panel-body">
+  <% @a = ("A".."Z").to_a %>
+  <% question.answers.each_with_index do |answer, i| %>
+    <ul>
+      <% if answer %>
+        <li><%= @a[i] %>.
+        <%= answer.answer_title %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+</div>
+
+  <br>
+
+  <% end %>
+
+  </div>
+</div>
+</div>
+</div>

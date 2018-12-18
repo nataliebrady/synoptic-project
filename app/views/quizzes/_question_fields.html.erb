@@ -1,0 +1,35 @@
+<div class='nested-fields question-box'>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href=".collapse-1">
+          Question
+        <i class="more-less glyphicon glyphicon-plus"></i></a>
+      </h4>
+    </div>
+    <div id="collapse-1" class="panel-collapse collapse collapse-1 in">
+      <div class="panel-body">
+
+        <p>The question:</p>
+        <%= f.text_field :question_title %>
+        <p>Position of numbered question:</p>
+        <%= f.select :position, options_for_select(0..100), { prompt: "Choose question position" } %>
+
+          <h4 class="form-answer-title">Answers </h4>
+
+          <div id='answers'>
+            <%= f.fields_for :answers do |answer| %>
+              <%= render 'answer_fields', :f => answer %>
+            <% end %>
+            <div class='links'>
+              <%= link_to_add_association 'Add Answer', f, :answers %>
+            </div>
+          </div>
+    <%= link_to_remove_association "Remove Question", f, class: "remove-question-link" %>
+
+      </div>
+    </div>
+  </div>
+
+</div>
