@@ -4,7 +4,6 @@ class Question < ApplicationRecord
   accepts_nested_attributes_for :answers, reject_if: :all_blank, allow_destroy: true
   validates :question_title, presence: true, length: { maximum: 250 }
   validates :position, presence: true
-  validates_uniqueness_of :position, allow_blank: false
   validates :answers, presence: true, length: { maximum: 250}
   validates_associated :answers
   validate :one_answer_only
