@@ -19920,3 +19920,42 @@ Processing by QuizzesController#edit as HTML
 Completed 200 OK in 268ms (Views: 262.4ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-19 14:42:01 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (36.5ms)
+Completed 200 OK in 129ms (Views: 128.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-19 14:43:33 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.1ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-12-19 14:43:34 +0000
+Started GET "/" for 127.0.0.1 at 2018-12-19 14:43:55 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.8ms)
+Completed 200 OK in 4495ms (Views: 4493.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-9f577658a36d5fb4317b9483cdb8cb03eaf190e7f1bb29c76621af9efd2aa97d.css?body=1" for 127.0.0.1 at 2018-12-19 14:44:00 +0000
+Started GET "/" for 127.0.0.1 at 2018-12-19 14:44:16 +0000
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (10.6ms)
+Completed 200 OK in 4912ms (Views: 4911.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.self-2d80600f5bc2a12f1dd521364a2c9284c46573930133e89e541353caf6a2fcf1.css?body=1" for 127.0.0.1 at 2018-12-19 14:44:21 +0000
