@@ -5,9 +5,11 @@
 <div class="col-md-12">
 
 <h1>All quizzes</h1>
-  
+
+<br>
+
 <%= will_paginate %>
-  
+
 <ul class="users">
   <% @quizzes.each do |quiz| %>
       <%= render quiz %>
@@ -15,6 +17,6 @@
 </ul>
 
 <%= will_paginate %>
-  
+
 </div>
 </div>

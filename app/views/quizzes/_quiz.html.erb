@@ -1,9 +1,11 @@
  <li>
 
-  <%= link_to quiz.title, quiz %>
+  <%= link_to quiz.title, quiz, class: "quiz-title" %>
   <% if current_user.edit? %>
-    | <%= link_to "Delete", quiz, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-      <%= link_to "Edit", edit_quiz_path(quiz) %>
-      | <% end %>
+  <div class="actions-container">
+      <%= link_to "Delete", quiz, method: :delete,
+                                  data: { confirm: "You sure?" }, class: "action-button" %>
+      <%= link_to "Edit", edit_quiz_path(quiz), class: "action-button" %>
+      <% end %>
+  </div>
  </li>

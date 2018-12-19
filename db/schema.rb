@@ -12,19 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20181218114826) do
 
-  create_table "answered_questions", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "question_id"
-    t.integer "answer_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "quiz_id"
-    t.index ["answer_id"], name: "index_answered_questions_on_answer_id"
-    t.index ["question_id"], name: "index_answered_questions_on_question_id"
-    t.index ["quiz_id"], name: "index_answered_questions_on_quiz_id"
-    t.index ["user_id"], name: "index_answered_questions_on_user_id"
-  end
-
   create_table "answers", force: :cascade do |t|
     t.string "answer_title"
     t.integer "question_id"
@@ -51,19 +38,6 @@ ActiveRecord::Schema.define(version: 20181218114826) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_questions", force: :cascade do |t|
-    t.integer "quiz_id"
-    t.integer "user_id"
-    t.integer "question_id"
-    t.integer "answer_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["answer_id"], name: "index_user_questions_on_answer_id"
-    t.index ["question_id"], name: "index_user_questions_on_question_id"
-    t.index ["quiz_id"], name: "index_user_questions_on_quiz_id"
-    t.index ["user_id"], name: "index_user_questions_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -71,8 +45,6 @@ ActiveRecord::Schema.define(version: 20181218114826) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "remember_digest"
-    t.boolean "admin", default: false
-    t.boolean "super_admin", default: false
     t.boolean "edit", default: false
     t.boolean "view", default: false
     t.boolean "restricted", default: false

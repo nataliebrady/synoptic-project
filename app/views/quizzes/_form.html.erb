@@ -4,7 +4,7 @@
     <%= f.text_area :title %>
     <div id='questions'>
       <div class="panel-group" id="accordion">
-      <%= f.fields_for :questions do |question| %>
+      <%= f.fields_for :questions do |question, num| %>
         <%= render 'question_fields', :f => question %>
 
       <% end %>
