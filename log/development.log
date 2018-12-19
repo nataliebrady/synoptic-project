@@ -19840,3 +19840,83 @@ Processing by QuizzesController#edit as HTML
 Completed 200 OK in 229ms (Views: 223.6ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/quizzes" for 127.0.0.1 at 2018-12-19 14:11:07 +0000
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "quizzes"[0m
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered quizzes/_quiz.html.erb (6.5ms)
+  Rendered quizzes/index.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 129ms (Views: 124.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/new_quiz" for 127.0.0.1 at 2018-12-19 14:11:09 +0000
+Processing by QuizzesController#new as HTML
+  Rendering quizzes/new.html.erb within layouts/application
+  Rendered shared/_quiz_error_messages.html.erb (6.0ms)
+  Rendered quizzes/_answer_fields.html.erb (3.9ms)
+  Rendered quizzes/_answer_fields.html.erb (0.9ms)
+  Rendered quizzes/_question_fields.html.erb (25.3ms)
+  Rendered quizzes/_answer_fields.html.erb (0.7ms)
+  Rendered quizzes/_question_fields.html.erb (14.9ms)
+  Rendered quizzes/_form.html.erb (63.8ms)
+  Rendered quizzes/new.html.erb within layouts/application (65.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (6.4ms)
+Completed 200 OK in 190ms (Views: 182.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/quizzes" for 127.0.0.1 at 2018-12-19 14:11:58 +0000
+Processing by QuizzesController#index as HTML
+  Rendering quizzes/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "quizzes"[0m
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered quizzes/_quiz.html.erb (5.7ms)
+  Rendered quizzes/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 141ms (Views: 137.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/quizzes/1/edit" for 127.0.0.1 at 2018-12-19 14:12:00 +0000
+Processing by QuizzesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuiz Load (0.1ms)[0m  [1m[34mSELECT  "quizzes".* FROM "quizzes" WHERE "quizzes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering quizzes/edit.html.erb within layouts/application
+  Rendered shared/_quiz_error_messages.html.erb (0.6ms)
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."quiz_id" = ?[0m  [["quiz_id", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 1]]
+  Rendered quizzes/_edit_answer_fields.html.erb (4.2ms)
+  Rendered quizzes/_edit_answer_fields.html.erb (0.4ms)
+  Rendered quizzes/_edit_answer_fields.html.erb (0.6ms)
+  Rendered quizzes/_answer_fields.html.erb (1.2ms)
+  Rendered quizzes/_edit_question_fields.html.erb (37.5ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 2]]
+  Rendered quizzes/_edit_answer_fields.html.erb (0.5ms)
+  Rendered quizzes/_edit_answer_fields.html.erb (0.4ms)
+  Rendered quizzes/_edit_answer_fields.html.erb (0.5ms)
+  Rendered quizzes/_answer_fields.html.erb (5.2ms)
+  Rendered quizzes/_edit_question_fields.html.erb (35.0ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 3]]
+  Rendered quizzes/_edit_answer_fields.html.erb (0.4ms)
+  Rendered quizzes/_edit_answer_fields.html.erb (0.3ms)
+  Rendered quizzes/_edit_answer_fields.html.erb (1.4ms)
+  Rendered quizzes/_answer_fields.html.erb (0.6ms)
+  Rendered quizzes/_edit_question_fields.html.erb (23.2ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?[0m  [["question_id", 4]]
+  Rendered quizzes/_edit_answer_fields.html.erb (0.5ms)
+  Rendered quizzes/_edit_answer_fields.html.erb (0.4ms)
+  Rendered quizzes/_edit_answer_fields.html.erb (0.3ms)
+  Rendered quizzes/_answer_fields.html.erb (0.3ms)
+  Rendered quizzes/_edit_question_fields.html.erb (22.7ms)
+  Rendered quizzes/_answer_fields.html.erb (0.4ms)
+  Rendered quizzes/_question_fields.html.erb (13.3ms)
+  Rendered quizzes/_edit_form.html.erb (151.9ms)
+  Rendered quizzes/edit.html.erb within layouts/application (153.2ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 268ms (Views: 262.4ms | ActiveRecord: 1.0ms)
+
+
