@@ -2,6 +2,10 @@
 
 <div class="row mainpage-container">
 
+  <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert form-alert alert-#{message_type}") %>
+  <% end %>
+
 <h1>All users</h1>
 
 <br>
